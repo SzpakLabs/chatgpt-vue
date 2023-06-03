@@ -9,8 +9,7 @@
                 class="ml-auto px-3 py-2 text-sm cursor-pointer hover:bg-white rounded-md"
                 @click="clickConfig()"
             >
-                <!-- translate text to English: 设置 -->
-                {{ isConfig ? "Config" : "Send" }}
+                Setup
             </div>
         </div>
 
@@ -180,11 +179,11 @@ const clickConfig = () => {
     switchConfigStatus();
 };
 
-const getSecretKey = () => "lianginx";
+const getSecretKey = () => "mainfish";
 
 const saveAPIKey = (apiKey: string) => {
     if (apiKey.slice(0, 3) !== "sk-" || apiKey.length !== 51) {
-        alert("API Key 错误，请检查后重新输入！");
+        alert("API Key error, please check and re-enter!");
         return false;
     }
     const aesAPIKey = cryptoJS.AES.encrypt(apiKey, getSecretKey()).toString();
@@ -220,6 +219,9 @@ pre {
         "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC",
         "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei",
         "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp",
-        sans-serif;
+        "Arial", "Roboto", "Segoe UI", "Tahoma", "Verdana", "Tahoma", sans-serif,
+        "Arial", "Roboto", "Noto Sans", "Arial Unicode MS", "Helvetica",
+        "Verdana", "Tahoma", "Calibri", "Trebuchet MS", "Lucida Sans Unicode",
+        "Arial Narrow", "Georgia", "Times New Roman", serif;
 }
 </style>

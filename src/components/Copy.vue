@@ -14,7 +14,7 @@ const btnConfig: {
     theme: "outline",
 };
 const btnTips = {
-    copy: "复制全文",
+    copy: "Copy answer",
     loading: "",
     success: "Success!",
     error: "Error!",
